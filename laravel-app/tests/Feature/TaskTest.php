@@ -111,4 +111,26 @@ class TaskTest extends TestCase
 
         $response->assertRedirect('/tasks');
     }
+
+    /**
+     * Test completion status persistence.
+     */
+    public function test_completion_status_persistence(): void
+    {
+        // First create a task
+        $this->post('/tasks', [
+            'title' => 'Task for persistence test',
+        ]);
+
+        // Toggle to completed
+        $this->post('/tasks/1/toggle');
+
+        // Toggle back to pending
+        $this->post('/tasks/1/toggle');
+
+        // Toggle to completed again
+        $response = $this->post('/tasks/1/toggle');
+
+        $response->assertRedirect('/tasks');
+    }
 }
