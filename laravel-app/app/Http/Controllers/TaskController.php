@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Task;
 use App\Http\Requests\TaskRequest;
+use App\Models\Task;
+use Illuminate\Http\Response;
 
 class TaskController extends Controller
 {
     /**
      * Display a listing of the tasks.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -19,15 +20,14 @@ class TaskController extends Controller
         } catch (\Exception $e) {
             $tasks = collect(); // Return empty collection if database not available
         }
-        
+
         return view('tasks.index', compact('tasks'));
     }
 
     /**
      * Store a newly created task in storage.
      *
-     * @param  \App\Http\Requests\TaskRequest  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(TaskRequest $request)
     {
@@ -47,7 +47,7 @@ class TaskController extends Controller
      * Show the form for editing the specified task.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -56,16 +56,15 @@ class TaskController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('tasks.index');
         }
-        
+
         return view('tasks.edit', compact('task'));
     }
 
     /**
      * Update the specified task in storage.
      *
-     * @param  \App\Http\Requests\TaskRequest  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(TaskRequest $request, $id)
     {
@@ -90,7 +89,7 @@ class TaskController extends Controller
      * Remove the specified task from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
@@ -108,14 +107,14 @@ class TaskController extends Controller
      * Toggle the completion status of a task.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function toggle($id)
     {
         try {
             $task = Task::findOrFail($id);
             $task->update([
-                'completed' => !$task->completed,
+                'completed' => ! $task->completed,
             ]);
         } catch (\Exception $e) {
             // Ignore database errors for testing

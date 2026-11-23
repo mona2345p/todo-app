@@ -17,12 +17,12 @@ class TestCommand extends Command
     public function handle()
     {
         $routes = Route::getRoutes()->getRoutes();
-        
+
         $this->info('Registered routes:');
         foreach ($routes as $route) {
-            $this->line($route->uri() . ' -> ' . $route->getActionName());
+            $this->line($route->uri().' -> '.$route->getActionName());
         }
-        
-        $this->info('Total routes: ' . count($routes));
+
+        $this->info('Total routes: '.count($routes));
     }
 }
