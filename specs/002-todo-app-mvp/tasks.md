@@ -30,25 +30,25 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 ## Phase 1: Setup (Project Initialization)
 
 ### Development Environment
-- [ ] T001 [P] Start MySQL service from XAMPP (or equivalent MySQL service)
-- [ ] T002 Create MySQL database `todo_app` via phpMyAdmin or MySQL CLI
+- [x] T001 [P] Start MySQL service from XAMPP (or equivalent MySQL service)
+- [x] T002 Create MySQL database `todo_app` via phpMyAdmin or MySQL CLI
 
 ### Laravel Project Setup
-- [ ] T003 [P] Create Laravel project in subdirectory `laravel-app/` using: `composer create-project laravel/laravel laravel-app`
-- [ ] T004 Configure .env file in `laravel-app/.env` with MySQL settings (update DB_CONNECTION=mysql, DB_DATABASE=todo_app, DB_USERNAME, DB_PASSWORD)
-- [ ] T005 Generate application key with `php artisan key:generate` from `laravel-app/`
+- [x] T003 [P] Create Laravel project in subdirectory `laravel-app/` using: `composer create-project laravel/laravel laravel-app`
+- [x] T004 Configure .env file in `laravel-app/.env` with MySQL settings (update DB_CONNECTION=mysql, DB_DATABASE=todo_app, DB_USERNAME, DB_PASSWORD)
+- [x] T005 Generate application key with `php artisan key:generate` from `laravel-app/`
 
 ### Git Initialization
 - [x] T006 Check if Git repository exists: run `git status`, if command fails with "not a git repository", then run `git init`
 - [x] T007 Check current branch: run `git branch --show-current`, if command fails or shows different branch, then create feature branch: `git checkout -b 002-todo-app-mvp`
 
 ### Git Commit
-- [ ] T008 Commit Phase 1 changes: `git add . && git commit -m "feat: Initial setup - Laravel project, MySQL, Git"`
+- [x] T008 Commit Phase 1 changes: `git add . && git commit -m "feat: Initial setup - Laravel project, MySQL, Git"`
 
 ## Phase 2: Foundational Tasks (Blocking Prerequisites)
 
 ### Database & Model
-- [ ] T009 [P] Create Task migration in `laravel-app/database/migrations/[timestamp]_create_tasks_table.php` (from data-model.md: Task entity schema - includes completed field)
+- [x] T009 [P] Create Task migration in `laravel-app/database/migrations/[timestamp]_create_tasks_table.php` (from data-model.md: Task entity schema - includes completed field)
 - [ ] T010 [P] Create Task model in `laravel-app/app/Models/Task.php` with mass assignable fields (from data-model.md: Task model attributes - includes title and completed)
 - [ ] T011 Run migrations to create tasks table (`php artisan migrate` from `laravel-app/`)
 
