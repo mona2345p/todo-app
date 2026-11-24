@@ -109,19 +109,58 @@ php artisan serve
 - ✅ No duplicate task created
 - ✅ Original task ID preserved
 
-### Scenario 6: Delete Task (P4)
-**Purpose**: Verify task deletion functionality
+### Scenario 6: Delete Task With Confirmation (P4)
+**Purpose**: Verify explicit confirmation before permanent deletion
 
-1. Find delete button next to "Finish report"
-2. Click delete and confirm (if confirmation dialog)
-3. Verify task removal
-4. Refresh page
+1. Find delete action on the "Finish report" card
+2. Confirm the warning page shows the task title
+3. Click "Confirm Delete"
+4. Refresh the task list
 
 **Expected Outcomes**:
-- ✅ Task removed from list immediately
-- ✅ Task still absent after page refresh
+- ✅ Task is not deleted until confirmation
+- ✅ Task is removed after confirmation and stays absent after refresh
 - ✅ No unintended side effects on other tasks
 - ✅ Feedback provided within 1 second (spec SC-004)
+
+### Scenario 7: Cards, Actions, Counters, and Status Styling (US5/US8)
+**Purpose**: Verify the enhanced task list interface
+
+1. Add at least three tasks
+2. Complete one task with its checkbox
+3. Inspect every card and the counters above the list
+
+**Expected Outcomes**:
+- ✅ Each task appears in its own card
+- ✅ Every card exposes Show, Edit, and Delete actions
+- ✅ Total, pending, and completed counters match task state
+- ✅ Only the completed task title has strikethrough; action controls never do
+- ✅ All four pages share the same visual style
+
+### Scenario 8: Task Details Page (US6)
+**Purpose**: Verify the dedicated read-only task view
+
+1. Click Show on a task card
+2. Review the displayed title and status
+3. Use Edit, Delete, and Back controls
+
+**Expected Outcomes**:
+- ✅ Dedicated page shows the correct task title and status
+- ✅ Edit opens the edit form for that task
+- ✅ Delete opens the confirmation page
+- ✅ Back returns to the task list
+
+### Scenario 9: Responsive and Confirmation-Cancel Checks (US5/US7)
+**Purpose**: Verify mobile usability and safe cancellation
+
+1. Open the task list at 375px and 1280px widths
+2. Start a delete, then click Cancel
+3. Return to the list and inspect the task
+
+**Expected Outcomes**:
+- ✅ Cards and all actions remain readable and operable at both widths
+- ✅ Cancelled confirmation leaves the task and counters unchanged
+- ✅ Special characters in titles render as text, including on the confirmation page
 
 ## Performance Validation
 
@@ -134,6 +173,11 @@ php artisan serve
 | **SC-004**: User operations feedback within 1 second | Manual timing of form submission → feedback | ≤ 1000ms |
 | **SC-005**: Invalid inputs rejected properly | Submit empty/whitespace-only titles | Error message shown |
 | **SC-006**: Error messages clear and helpful | Read validation error messages | Understandable by user |
+| **SC-007**: Every card exposes Show/Edit/Delete | Inspect each task card | 100% of cards |
+| **SC-008**: Counters match task state | Compare counters after add/toggle/edit/delete | Exact match |
+| **SC-009**: Delete requires confirmation | Confirm and cancel deletion | No premature deletion |
+| **SC-010**: Responsive at 375px and 1280px | Resize viewport and use all actions | Readable and operable |
+| **SC-011**: Strikethrough only on completed titles | Inspect titles and action controls | 100% / 0% |
 
 ## Troubleshooting
 
