@@ -1,4 +1,4 @@
-# Tasks: Simple To-Do List Application
+﻿# Tasks: Simple To-Do List Application
 
 **Feature**: specs/002-todo-app-mvp/
 **Branch**: 002-todo-app-mvp
@@ -56,7 +56,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 ### Database & Model
 - [x] T009 [P] Create Task migration in `database/migrations/[timestamp]_create_tasks_table.php` (from data-model.md: Task entity schema - includes completed field)
 - [x] T010 [P] Create Task model in `app/Models/Task.php` with mass assignable fields (from data-model.md: Task model attributes - includes title and completed)
-- [ ] T011 Run migrations to create tasks table (`php artisan migrate` from the repository root)
+- [x] T011 Run migrations to create tasks table (`php artisan migrate` from the repository root)
 
 ### Controller & Routes
 - [x] T012 Create TaskController in `app/Http/Controllers/TaskController.php`
@@ -66,7 +66,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T014 Run Laravel setup test: `php artisan --version` from the repository root and verify `php artisan route:list` shows the registered task routes
 
 ### Git Commit
-- [ ] T015 Commit Phase 2 changes: `git add . && git commit -m "feat: Implement Phase 2 - Database setup & foundational components"`
+- [x] T015 Commit Phase 2 changes: `git add . && git commit -m "feat: Implement Phase 2 - Database setup & foundational components"`
 
 ## Phase 3: User Story 1 - Add New Task (P1)
 
@@ -100,7 +100,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T028 Run US1 tests from the repository root with the isolated test database command in SETUP_GUIDE.md (should test US1 functionality)
 
 ### Git Commit
-- [ ] T029 Commit Phase 3 changes: `git add . && git commit -m "feat: Implement US1 - Add new task functionality"`
+- [x] T029 Commit Phase 3 changes: `git add . && git commit -m "feat: Implement US1 - Add new task functionality"`
 
 ## Phase 4: User Story 2 - View Tasks List (P2)
 
@@ -121,7 +121,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T033 Run US1 & US2 tests from the repository root with the isolated test database command in SETUP_GUIDE.md (should test US1 & US2 functionality)
 
 ### Git Commit
-- [ ] T034 Commit Phase 4 changes: `git add . && git commit -m "feat: Implement US2 - View tasks list functionality"`
+- [x] T034 Commit Phase 4 changes: `git add . && git commit -m "feat: Implement US2 - View tasks list functionality"`
 ## Phase 5: User Story 3 - Toggle Task Completion (P3)
 
 **Story Goal**: Allow users to toggle tasks between completed and pending states (spec FR-003)
@@ -147,7 +147,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T042 Run US1-US3 tests from the repository root with the isolated test database command in SETUP_GUIDE.md (should test US1, US2 & US3 functionality)
 
 ### Git Commit
-- [ ] T043 Commit Phase 5 changes: `git add . && git commit -m "feat: Implement US3 - Toggle task completion functionality"`
+- [x] T043 Commit Phase 5 changes: `git add . && git commit -m "feat: Implement US3 - Toggle task completion functionality"`
 
 ## Phase 6: User Story 4 - Edit and Delete Tasks (P4)
 
@@ -178,7 +178,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T055 Run all tests from the repository root with the isolated test database command in SETUP_GUIDE.md (should test all US1-US4 functionality)
 
 ### Git Commit
-- [ ] T056 Commit Phase 6 changes: `git add . && git commit -m "feat: Implement US4 - Edit and delete tasks functionality"`
+- [x] T056 Commit Phase 6 changes: `git add . && git commit -m "feat: Implement US4 - Edit and delete tasks functionality"`
 
 ## Phase 7: Polish & Cross-Cutting Concerns
 
@@ -199,7 +199,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T066 Run final test suite from the repository root with the isolated test database command in SETUP_GUIDE.md (all tests should pass)
 
 ### Git Commit
-- [ ] T067 Commit Phase 7 changes: `git add . && git commit -m "feat: Polish & final validation"`
+- [x] T067 Commit Phase 7 changes: `git add . && git commit -m "feat: Polish & final validation"`
 
 ## Phase 8: US5 - Modern Responsive Task Cards (P2 Enhancement)
 
@@ -214,7 +214,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T070 [US5] Create `resources/views/tasks/partials/task-card.blade.php` with escaped title, status indicator, toggle POST form with CSRF, and Show/Edit/Delete actions; apply strikethrough only to completed titles (FR-014, FR-018, FR-019, SC-011)
 - [x] T071 [US5] Render `resources/views/tasks/partials/task-card.blade.php` for every task in `resources/views/tasks/index.blade.php` through the shared layout (FR-012)
 - [x] T072 [US5] Run US5 tests from the repository root with the isolated test database command in `SETUP_GUIDE.md` and confirm T001-T067 behavior remains unchanged
-- [ ] T073 [US5] Commit Phase 8 changes: `git add . && git commit -m "feat: Implement US5 - responsive task cards"`
+- [x] T073 [US5] Commit Phase 8 changes: `git add . && git commit -m "feat: Implement US5 - responsive task cards"`
 
 ## Phase 9: US8 - Task Status Counters (P3)
 
@@ -229,7 +229,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T076 [US8] Compute and pass `total`, `pending`, and `completed` counts from `TaskController::index()` in `app/Http/Controllers/TaskController.php` (FR-017, SC-008)
 - [x] T077 [US8] Render `resources/views/tasks/partials/counters.blade.php` in `resources/views/tasks/index.blade.php` above the task cards (FR-017)
 - [x] T078 [US8] Run US5-US8 tests from the repository root with the isolated test database command in `SETUP_GUIDE.md`
-- [ ] T079 [US8] Commit Phase 9 changes: `git add . && git commit -m "feat: Implement US8 - task status counters"`
+- [x] T079 [US8] Commit Phase 9 changes: `git add . && git commit -m "feat: Implement US8 - task status counters"`
 
 ## Phase 10: US6 - Dedicated Task Details Page (P4)
 
@@ -245,7 +245,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T083 [US6] Create `resources/views/tasks/show.blade.php` with escaped title, status indicator, Edit, Delete, and Back-to-list controls in the shared layout (FR-013, FR-015, FR-018)
 - [x] T084 [US6] Add the Show action link in `resources/views/tasks/partials/task-card.blade.php` targeting `tasks.show` (FR-014)
 - [x] T085 [US6] Run US5-US8 tests from the repository root with the isolated test database command in `SETUP_GUIDE.md`
-- [ ] T086 [US6] Commit Phase 10 changes: `git add . && git commit -m "feat: Implement US6 - task details page"`
+- [x] T086 [US6] Commit Phase 10 changes: `git add . && git commit -m "feat: Implement US6 - task details page"`
 
 ## Phase 11: US7 - Delete Confirmation (P4)
 
@@ -262,7 +262,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T091 [US7] Update Delete actions in `resources/views/tasks/partials/task-card.blade.php` and `resources/views/tasks/show.blade.php` to target `tasks.delete-confirm` instead of deleting immediately (FR-014, FR-016)
 - [x] T092 [US7] Update `TaskController::destroy()` in `app/Http/Controllers/TaskController.php` to redirect to `tasks.index` after confirmed deletion so counters refresh (preserves existing behavior)
 - [x] T093 [US7] Run US5-US8 tests from the repository root with the isolated test database command in `SETUP_GUIDE.md`
-- [ ] T094 [US7] Commit Phase 11 changes: `git add . && git commit -m "feat: Implement US7 - delete confirmation"`
+- [x] T094 [US7] Commit Phase 11 changes: `git add . && git commit -m "feat: Implement US7 - delete confirmation"`
 
 ## Phase 12: UI Regression & Cross-Cutting Validation
 
@@ -278,7 +278,7 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - [x] T098 Verify CSRF tokens on new forms in `resources/views/tasks/partials/task-card.blade.php` and `resources/views/tasks/delete.blade.php`, and verify escaped task-title output on the delete confirmation page for XSS protection (Constitution GATE 5)
 - [x] T099 Update `specs/002-todo-app-mvp/quickstart.md` with validation steps for cards, counters, details page, delete confirmation, and responsive checks
 - [x] T100 Run the full test suite from the repository root with the isolated test database command in `SETUP_GUIDE.md`; all tests must pass
-- [ ] T101 Commit Phase 12 changes: `git add . && git commit -m "chore: UI regression validation and documentation"`
+- [x] T101 Commit Phase 12 changes: `git add . && git commit -m "chore: UI regression validation and documentation"`
 
 ## Implementation Strategy
 
@@ -299,4 +299,26 @@ Implementation tasks for a Laravel-based To-Do List application following MVC ar
 - Standard Laravel form submissions (no AJAX required)
 - Basic CSS styling acceptable for MVP
 - Enhanced UI phases preserve Laravel/Blade/MySQL and add responsive cards, counters, details, and delete confirmation with lightweight CSS only
-- Implementation and verification tasks T068-T072, T074-T078, T080-T085, T087-T093, and T095-T100 are complete; commit tasks remain unchecked pending authorization
+## Final Implementation Verification
+
+- All functional requirements implemented.
+- MySQL migration verified successfully.
+- Automated tests: 28 passed, 173 assertions.
+- Fresh installation from GitHub verified.
+- GitHub publication completed successfully.
+
+### Commit Verification
+
+- T015: 95f84fb
+- T029: 2f01a94
+- T043: cc8bb4d
+- T067: 2564bb3
+
+The changes for T034, T056, T073, T079, T086,
+T094, and T101 were saved in consolidated commit
+c7f0246 instead of separate phase commits.
+
+### Fresh Installation Fixes
+
+- 6e81e43: Required Laravel directories.
+- 28f7fd6: Required test directory.
